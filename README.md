@@ -1,8 +1,9 @@
 # OrangeHRM-testing
-Testing open source OrangeHRM application
 
-https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials
+Testing open source OrangeHRM application 
 
-Note on some rare occasions the application changes language in HTML so xpath doesn't work 
+https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials  
 
-IDE eclipse, automation tool selenium, ChromeDriver 
+Note on some rare occasions the application changes language in HTML so xpath doesn't work  
+
+IDE eclipse, automation tool selenium, ChromeDriver
