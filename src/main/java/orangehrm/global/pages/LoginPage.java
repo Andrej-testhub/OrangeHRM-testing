@@ -43,11 +43,17 @@ public class LoginPage {
 	public WebElement forgotPass() {
 		return Utils.waitForElementPresence(driver, By.xpath("//a[contains(text(),'Forgot your password?')]"), 10);
 	}
+	public WebElement alternativeLink() {
+		return Utils.waitForElementPresence(driver, By.xpath("//input[@id='openIdLogin']"), 10);
+	}
+	public WebElement selectOpt() {
+		return Utils.waitForElementPresence(driver, By.xpath("//select[@id='openIdProvider']"), 10);
+	}
 	public WebElement orangeHRMLink() {
 		return Utils.waitForElementPresence(driver, By.xpath("//a[contains(text(),'OrangeHRM, Inc')]"), 10);
 	}
 	public WebElement linkedInLink() {
-		return Utils.waitForElementPresence(driver, By.xpath("//a[1]"), 10);
+		return Utils.waitForElementPresence(driver, By.xpath("/html[1]/body[1]/div[1]/div[1]/div[5]/div[2]/a[1]"), 10);
 	}
 	public WebElement facebookLink() {
 		return Utils.waitForElementPresence(driver, By.xpath("/html[1]/body[1]/div[1]/div[1]/div[5]/div[2]/a[2]"), 10);
