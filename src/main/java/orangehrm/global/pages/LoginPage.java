@@ -46,6 +46,9 @@ public class LoginPage {
 	public WebElement alternativeLink() {
 		return Utils.waitForElementPresence(driver, By.xpath("//input[@id='openIdLogin']"), 10);
 	}
+	public WebElement selectOpt() {
+		return Utils.waitForElementPresence(driver, By.xpath("//select[@id='openIdProvider']"), 10);
+	}
 	public WebElement orangeHRMLink() {
 		return Utils.waitForElementPresence(driver, By.xpath("//a[contains(text(),'OrangeHRM, Inc')]"), 10);
 	}
