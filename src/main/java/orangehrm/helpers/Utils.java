@@ -22,9 +22,9 @@ public class Utils {
 		WebElement element = (new WebDriverWait(driver,waitinterval).until(ExpectedConditions.elementToBeClickable(selector)));
 					return element;
 	}
-	public void takeScreenShot(WebDriver driver, String picname) throws Exception {
+	public void takeScreenShot(WebDriver driver, String screenShotName) throws Exception {
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcFile, new File("./ScreenShots/" + picname + ".png"));
+		FileUtils.copyFile(srcFile, new File("./ScreenShots/" + screenShotName + ".png"));
 	}
 	public static boolean isPresent(WebDriver webdriver, By selector) {
 		try {
