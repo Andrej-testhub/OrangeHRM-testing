@@ -23,6 +23,7 @@ import orangehrm.helpers.Utils;
 public class LoginPageLinks {
 	private WebDriver  driver;
 	private LoginPage loginPage;
+	private Actions action;
 	private String baseUrl;
 	
 	@BeforeSuite
@@ -35,6 +36,7 @@ public class LoginPageLinks {
 	@BeforeTest
 	public void setupPages() {
 		loginPage = new LoginPage(driver);
+		action = new Actions(driver);
 	}
 	@Test(description="Testing links from Login Page to LinkedIn, Facebook, Youtube,Twitter")
 	public void linkTests() throws Exception {
@@ -69,7 +71,6 @@ public class LoginPageLinks {
 		assertTrue(loginPage.youtubeLink().isDisplayed());
 		assertTrue(loginPage.youtubeLink().isEnabled());
 		String parent = driver.getWindowHandle();
-		Actions action = new Actions(driver);
 		action.keyDown(Keys.CONTROL).click(loginPage.orangeHRMLink()).keyDown(Keys.CONTROL).build().perform();
 		action.keyDown(Keys.CONTROL).click(loginPage.linkedInLink()).keyDown(Keys.CONTROL).build().perform();
 		action.keyDown(Keys.CONTROL).click(loginPage.facebookLink()).keyDown(Keys.CONTROL).build().perform();

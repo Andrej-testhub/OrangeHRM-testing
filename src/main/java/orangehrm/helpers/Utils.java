@@ -22,7 +22,7 @@ public class Utils {
 		WebElement element = (new WebDriverWait(driver,waitinterval).until(ExpectedConditions.elementToBeClickable(selector)));
 					return element;
 	}
-	public void takeScreenShot(WebDriver driver, String screenShotName) throws Exception {
+	public static void takeScreenShot(WebDriver driver, String screenShotName) throws Exception {
 		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(srcFile, new File("./ScreenShots/" + screenShotName + ".png"));
 	}
