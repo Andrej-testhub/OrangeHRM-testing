@@ -2,7 +2,7 @@ package orangehrm.global.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.ex1.utils.Utils;
+import orangehrm.helpers.Utils;
 
 public class LoginPage {
 	private WebDriver driver;
